@@ -1,0 +1,18 @@
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin icon-header {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-size: cover;
+}
+@mixin content {
+    position: absolute;
+    content: "";
+}
