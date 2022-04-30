@@ -2,18 +2,21 @@
 .mane-page 
   SideBar
   router-view
+  Footer
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import SideBar from "@/components/SideBar/SideBar.vue";
 import Campaigns from "@/components/Campaigns/Campaigns.vue";
+import Footer from "@/components/Footer/Footer.vue";
 
 export default defineComponent({
   name: "TheLayout",
    components: {
     SideBar,
     Campaigns,
+    Footer,
   },
 
 });
@@ -27,5 +30,6 @@ export default defineComponent({
   display: flex;
   flex-direction: row;
   margin: 0px;
+
 }
 </style>

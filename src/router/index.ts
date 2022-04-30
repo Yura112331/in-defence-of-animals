@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import TheLayout from '../components/TheLayout.vue';
+import Campaigns from '../components/Campaigns/Campaigns.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -24,7 +25,99 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: "/campaigns",
         name: "Campaigns",
-        component: () => import("../components/Campaigns/Campaigns.vue"),
+        component: Campaigns,
+        children: [
+          {
+            path: "/Break-The-Chains",
+            name: "Break The Chains",
+            component: () => import("../views/Campaigns/BreakTheChains.vue"),
+          },
+          {
+            path: "/Carnivores-Anonymous",
+            name: "Carnivores Anonymous",
+            component: () => import("../views/Campaigns/CarnivoresAnonymous.vue"),
+          },
+          {
+            path: "/Cetaceans",
+            name: "Cetaceans",
+            component: () => import("../views/Campaigns/Cetaceans.vue"),
+          },
+          {
+            path: "/Community-Cats",
+            name: "Community Cats",
+            component: () => import("../views/Campaigns/CommunityCats.vue"),
+          },
+          {
+            path: "/Dog-Meat",
+            name: "Dog Meat",
+            component: () => import("../views/Campaigns/DogMeat.vue"),
+          },
+          {
+            path: "/Elephants",
+            name: "Elephants",
+            component: () => import("../views/Campaigns/Elephants.vue"),
+          },
+          {
+            path: "/Farmed-Animals",
+            name: "Farmed Animals",
+            component: () => import("../views/Campaigns/FarmedAnimals.vue"),
+          },
+          {
+            path: "/Fish-Abuse",
+            name: "Fish Abuse",
+            component: () => import("../views/Campaigns/FishAbuse.vue"),
+          },
+          {
+            path: "/Fur",
+            name: "Fur",
+            component: () => import("../views/Campaigns/Fur.vue"),
+          },
+          {
+            path: "/Geese",
+            name: "Geese",
+            component: () => import("../views/Campaigns/Geese.vue"),
+          },
+          {
+            path: "/Guardians",
+            name: "Guardians",
+            component: () => import("../views/Campaigns/Guardians.vue"),
+          },
+          {
+            path: "/Justice-For-Animals",
+            name: "Justice for Animals",
+            component: () => import("../views/Campaigns/JusticeForAnimals.vue"),
+          },
+          {
+            path: "/Puppy-Mills",
+            name: "Puppy Mills",
+            component: () => import("../views/Campaigns/PuppyMills.vue"),
+          },
+          {
+            path: "/Sustainable-Activism",
+            name: "Sustainable Activism",
+            component: () => import("../views/Campaigns/SustainableActivism.vue"),
+          },
+          {
+            path: "/Tule-Elk",
+            name: "Tule Elk",
+            component: () => import("../views/Campaigns/TuleElk.vue"),
+          },
+          {
+            path: "/Vivisection",
+            name: "Vivisection",
+            component: () => import("../views/Campaigns/Vivisection.vue"),
+          },
+          {
+            path: "/Wild-And-Free",
+            name: "Wild and Free",
+            component: () => import("../views/Campaigns/WildAndFree.vue"),
+          },
+          {
+            path: "/Wild-Horses-&-Burros",
+            name: "Wild Horses & Burros",
+            component: () => import("../views/Campaigns/WildHorses&Burros.vue"),
+          },
+        ],
       },
       {
         path: "/sanctuaries",

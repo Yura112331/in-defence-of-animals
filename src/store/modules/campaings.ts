@@ -62,7 +62,7 @@ const store: Module<any, any> = {
       {
         name: "Justice for Animals",
         imgs: "img12.jpg",
-        url: "/Justice-for-Animals",
+        url: "/Justice-For-Animals",
       },
       {
         name: "Puppy Mills",
@@ -87,7 +87,7 @@ const store: Module<any, any> = {
       {
         name: "Wild and Free",
         imgs: "img17.jpg",
-        url: "/Wild-and-Free",
+        url: "/Wild-And-Free",
       },
       {
         name: "Wild Horses & Burros",

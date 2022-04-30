@@ -1,14 +1,14 @@
 <template lang="pug">
 section.general-menu   
     .menu
-        .logo
+        router-link.logo(to="/home")
             .icon
         .top-bar
             router-link(
-                v-for="(item, i) in routers",
+                v-for="(item, i) in routerSideBar",
                 active-class="link",
                 :to="item.url",
-                :key="'routers' + i"
+                :key="'routerSideBar' + i"
                 ) {{ item.name }}
             router-link.donate(to="/donate") DONATE
 </template>
@@ -19,7 +19,7 @@ export default defineComponent({
   name: "SideBar",
   data() {
     return {
-      routers: [
+      routerSideBar: [
         {
           name: "HOME",
           url: "/home",
@@ -97,6 +97,10 @@ export default defineComponent({
       }
       a:hover {
         color: #9fd385;
+      }
+      .link {
+        border-bottom: 2px solid #45ca4b;
+        color: #45ca4b;
       }
 
       .donate {
